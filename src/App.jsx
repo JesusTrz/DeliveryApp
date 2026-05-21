@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import Login from './views/Login/Login'
 import Home from './views/Home/Home'
@@ -7,7 +7,7 @@ import Orders from './views/Orders/Orders'
 import Profile from './views/Profile/Profile'
 import Cart from './views/Cart/Cart'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Login />,
