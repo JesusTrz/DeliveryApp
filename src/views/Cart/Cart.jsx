@@ -25,16 +25,20 @@ const ERROR_TIME = new Date().toISOString()
 function Cart() {
   const navigate = useNavigate()
   const { items, addItem, removeItem, clearCart, totalItems, subtotal } = useCart()
-  const [step, setStep]     = useState('cart')
+  const [step, setStep]   = useState('cart')
   const [method, setMethod] = useState('card')
+  const [fixed, setFixed]   = useState(false)
 
   const total = subtotal + DELIVERY_FEE
 
   function handleConfirm() {
     setStep('processing')
-    setTimeout(() => setStep('error'), 2000)
+    if (fixed) {
+      setTimeout(() => setStep('success'), 2000)
+    } else {
+      setTimeout(() => setStep('error'), 2000)
+    }
   }
-
 
   function handleBackHome() {
     clearCart()
