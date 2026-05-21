@@ -1,0 +1,245 @@
+.search-page {
+  min-height: 100svh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.search-header {
+  background: var(--surface);
+  padding: 18px 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.back-btn {
+  background: var(--surface-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-1);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+.search-header h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-1);
+}
+
+.search-bar-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  gap: 10px;
+}
+
+.s-icon {
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.search-bar-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: var(--text-1);
+  padding: 4px 0;
+}
+
+.search-bar-wrap input::placeholder {
+  color: var(--text-3);
+}
+
+.filter-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 14px 20px;
+  scrollbar-width: none;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip {
+  flex-shrink: 0;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--surface-2);
+  color: var(--text-2);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-chip.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 3px 8px rgba(255, 107, 53, 0.28);
+}
+
+.filter-chip:active {
+  transform: scale(0.95);
+}
+
+.results-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 10px;
+}
+
+.results-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.results-count {
+  font-size: 12px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.food-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.food-card:active {
+  transform: scale(0.97);
+}
+
+.food-thumb {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+}
+
+.food-body {
+  padding: 10px 12px 12px;
+}
+
+.food-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1.25;
+}
+
+.food-restaurant {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 3px;
+}
+
+.food-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.food-price {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.food-rating {
+  font-size: 11px;
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.star-icon {
+  color: #F59E0B;
+}
+
+.add-btn {
+  width: 32px;
+  height: 32px;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(255, 107, 53, 0.28);
+}
+
+.add-btn:active {
+  transform: scale(0.9);
+}
+
+.qty-num {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 14px;
+}
+
+.no-icon {
+  color: var(--text-3);
+}
+
+.no-results p {
+  font-size: 15px;
+  color: var(--text-3);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+}
